@@ -1,0 +1,1726 @@
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<title>Moyomade Adegbite — Impact Profile</title>
+		<link rel="preconnect" href="https://fonts.googleapis.com" />
+		<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+		<link
+			href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,300;1,400&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap"
+			rel="stylesheet"
+		/>
+		<style>
+			:root {
+				--black: #0a0a0af8;
+				--white: #fafaf8;
+				--gray-100: #f4f4f1;
+				--gray-200: #a4a4a0;
+				--gray-400: #9e9e96;
+				--gray-600: #5a5a54;
+				--accent: #c8a96e;
+				--accent-light: #e8d5b0;
+				--accent-dark: #8a6f3c;
+				--text: #1a1a16;
+			}
+
+			*,
+			*::before,
+			*::after {
+				box-sizing: border-box;
+				margin: 0;
+				padding: 0;
+			}
+
+			html {
+				scroll-behavior: smooth;
+			}
+
+			body {
+				font-family: "DM Sans", sans-serif;
+				background: var(--white);
+				color: var(--text);
+				font-size: 16px;
+				line-height: 1.6;
+				overflow-x: hidden;
+			}
+
+			/* ── NAV ── */
+			nav {
+				position: fixed;
+				top: 0;
+				left: 0;
+				right: 0;
+				z-index: 100;
+				display: flex;
+				align-items: center;
+				justify-content: space-between;
+				padding: 1.25rem 3rem;
+				background: rgba(250, 250, 248, 0.88);
+				backdrop-filter: blur(18px);
+				border-bottom: 1px solid var(--gray-200);
+			}
+			.nav-logo {
+				font-family: "Cormorant Garamond", serif;
+				font-size: 1.2rem;
+				font-weight: 500;
+				letter-spacing: 0.04em;
+				color: var(--text);
+				text-decoration: none;
+			}
+			.nav-links {
+				display: flex;
+				gap: 2rem;
+				list-style: none;
+			}
+			.nav-links a {
+				font-size: 0.8rem;
+				font-weight: 400;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				color: var(--gray-600);
+				text-decoration: none;
+				transition: color 0.2s;
+			}
+			.nav-links a:hover {
+				color: var(--accent-dark);
+			}
+
+			/* ── HERO ── */
+			.hero {
+				min-height: 100vh;
+				display: flex;
+				flex-direction: column;
+				align-items: center;
+				justify-content: center;
+				text-align: center;
+				padding: 8rem 2rem 6rem;
+				position: relative;
+				overflow: hidden;
+			}
+			.hero-bg {
+				position: absolute;
+				inset: 0;
+				z-index: 0;
+				background:
+					radial-gradient(
+						ellipse 70% 60% at 50% 40%,
+						rgba(200, 169, 110, 0.08) 0%,
+						transparent 70%
+					),
+					linear-gradient(180deg, var(--white) 0%, var(--gray-100) 100%);
+			}
+			.hero-grain {
+				position: absolute;
+				inset: 0;
+				z-index: 1;
+				opacity: 0.025;
+				background-image: url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='noise'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='0.9' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23noise)'/%3E%3C/svg%3E");
+				background-size: 200px;
+			}
+			.hero-content {
+				position: relative;
+				z-index: 2;
+				max-width: 800px;
+			}
+
+			.hero-eyebrow {
+				font-size: 0.72rem;
+				font-weight: 500;
+				letter-spacing: 0.2em;
+				text-transform: uppercase;
+				color: var(--accent-dark);
+				margin-bottom: 1.5rem;
+				animation: fadeUp 0.8s ease both;
+			}
+			.hero-name {
+				font-family: "Cormorant Garamond", serif;
+				font-size: clamp(3.2rem, 8vw, 6.5rem);
+				font-weight: 300;
+				line-height: 1.05;
+				letter-spacing: -0.01em;
+				color: var(--black);
+				margin-bottom: 0.8rem;
+				animation: fadeUp 0.8s 0.1s ease both;
+			}
+			.hero-title {
+				font-size: 0.9rem;
+				font-weight: 500;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				color: var(--gray-600);
+				margin-bottom: 2.2rem;
+				animation: fadeUp 0.8s 0.2s ease both;
+			}
+			.hero-statement {
+				font-family: "Cormorant Garamond", serif;
+				font-size: clamp(1.1rem, 2.5vw, 1.45rem);
+				font-weight: 400;
+				font-style: italic;
+				color: var(--gray-600);
+				line-height: 1.55;
+				max-width: 600px;
+				margin: 0 auto 2.5rem;
+				animation: fadeUp 0.8s 0.3s ease both;
+			}
+			.hero-tags {
+				display: flex;
+				flex-wrap: wrap;
+				gap: 0.6rem;
+				justify-content: center;
+				margin-bottom: 3rem;
+				animation: fadeUp 0.8s 0.4s ease both;
+			}
+			.tag {
+				font-size: 0.72rem;
+				font-weight: 500;
+				letter-spacing: 0.1em;
+				text-transform: uppercase;
+				padding: 0.4rem 1rem;
+				border: 1px solid var(--accent);
+				color: var(--accent-dark);
+				border-radius: 2px;
+				background: rgba(200, 169, 110, 0.06);
+			}
+			.hero-ctas {
+				display: flex;
+				gap: 1rem;
+				justify-content: center;
+				animation: fadeUp 0.8s 0.5s ease both;
+			}
+			.btn-primary {
+				padding: 0.85rem 2.2rem;
+				background: var(--black);
+				color: var(--white);
+				font-size: 0.8rem;
+				font-weight: 500;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				text-decoration: none;
+				border-radius: 2px;
+				transition:
+					background 0.2s,
+					transform 0.15s;
+			}
+			.btn-primary:hover {
+				background: var(--accent-dark);
+				transform: translateY(-1px);
+			}
+			.btn-secondary {
+				padding: 0.85rem 2.2rem;
+				border: 1px solid var(--black);
+				color: var(--black);
+				font-size: 0.8rem;
+				font-weight: 500;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+				text-decoration: none;
+				border-radius: 2px;
+				transition: all 0.2s;
+			}
+			.btn-secondary:hover {
+				background: var(--black);
+				color: var(--white);
+			}
+
+			/* ── SECTIONS ── */
+			section {
+				padding: 6rem 3rem;
+			}
+			.section-label {
+				font-size: 0.68rem;
+				font-weight: 500;
+				letter-spacing: 0.22em;
+				text-transform: uppercase;
+				color: var(--accent-dark);
+				margin-bottom: 0.75rem;
+				display: block;
+			}
+			.section-heading {
+				font-family: "Cormorant Garamond", serif;
+				font-size: clamp(2rem, 4vw, 3rem);
+				font-weight: 400;
+				line-height: 1.15;
+				color: var(--black);
+				margin-bottom: 3rem;
+			}
+
+			/* ── PROOF SNAPSHOT ── */
+			.proof {
+				background: var(--black);
+				color: var(--white);
+			}
+			.proof-inner {
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			.proof-header {
+				display: flex;
+				align-items: flex-end;
+				justify-content: space-between;
+				margin-bottom: 3rem;
+				flex-wrap: wrap;
+				gap: 1rem;
+			}
+			.proof-heading {
+				font-family: "Cormorant Garamond", serif;
+				font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+				font-weight: 300;
+				color: var(--white);
+			}
+			.proof-sub {
+				font-size: 0.8rem;
+				color: rgba(255, 255, 255, 0.4);
+				letter-spacing: 0.08em;
+				text-transform: uppercase;
+				max-width: 220px;
+				text-align: right;
+				line-height: 1.4;
+			}
+			.proof-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+				gap: 1px;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+			}
+			.proof-card {
+				padding: 2.2rem 2rem;
+				border-right: 1px solid rgba(255, 255, 255, 0.08);
+				position: relative;
+				transition: background 0.2s;
+			}
+			.proof-card:hover {
+				background: rgba(200, 169, 110, 0.05);
+			}
+			.proof-card:last-child {
+				border-right: none;
+			}
+			.proof-number {
+				font-family: "Cormorant Garamond", serif;
+				font-size: 2rem;
+				font-weight: 300;
+				color: var(--accent);
+				letter-spacing: 0.15em;
+				margin-bottom: 1rem;
+				display: block;
+			}
+			.proof-card-title {
+				font-size: 1.5rem;
+				font-weight: 500;
+				color: var(--white);
+				line-height: 1.35;
+				margin-bottom: 0.5rem;
+			}
+			.proof-card-sub {
+				font-size: 1rem;
+				color: rgba(255, 255, 255, 0.714);
+				line-height: 1.5;
+			}
+
+			/* ── STORY ── */
+			.story {
+				background: var(--white);
+			}
+			.story-inner {
+				max-width: 1100px;
+				margin: 0 auto;
+			}
+			.story-layout {
+				display: grid;
+				grid-template-columns: 1fr 1.8fr;
+				gap: 6rem;
+				align-items: start;
+			}
+			.story-left {
+				position: sticky;
+				top: 6rem;
+			}
+			.story-number {
+				font-family: "Cormorant Garamond", serif;
+				font-size: 7rem;
+				font-weight: 300;
+				line-height: 1;
+				color: var(--gray-200);
+				margin-bottom: -1rem;
+			}
+			.story-paragraphs p {
+				font-family: "Cormorant Garamond", serif;
+				font-size: 1.35rem;
+				font-weight: 400;
+				line-height: 1.7;
+				color: var(--gray-600);
+				margin-bottom: 1.8rem;
+			}
+			.story-paragraphs p:first-child {
+				font-size: 1.5rem;
+				color: var(--text);
+			}
+			.story-paragraphs p:last-child {
+				margin-bottom: 0;
+			}
+
+			/* ── PILLARS ── */
+			.pillars {
+				background: var(--gray-100);
+			}
+			.pillars-inner {
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			.pillars-grid {
+				display: grid;
+				grid-template-columns: repeat(3, 1fr);
+				gap: 2px;
+				border: 1px solid var(--gray-200);
+			}
+			.pillar {
+				padding: 3rem 2.5rem;
+				background: var(--white);
+				border-right: 1px solid var(--gray-200);
+				transition:
+					background 0.2s,
+					transform 0.2s;
+				position: relative;
+				overflow: hidden;
+			}
+			.pillar:last-child {
+				border-right: none;
+			}
+			.pillar::after {
+				content: "";
+				position: absolute;
+				bottom: 0;
+				left: 0;
+				right: 0;
+				height: 3px;
+				background: var(--accent);
+				transform: scaleX(0);
+				transform-origin: left;
+				transition: transform 0.3s ease;
+			}
+			.pillar:hover::after {
+				transform: scaleX(1);
+			}
+			.pillar-icon {
+				font-size: 1.6rem;
+				margin-bottom: 1.5rem;
+				display: block;
+			}
+			.pillar-title {
+				font-family: "Cormorant Garamond", serif;
+				font-size: 1.8rem;
+				font-weight: 600;
+				margin-bottom: 1rem;
+				color: var(--black);
+			}
+			.pillar-body {
+				font-size: 1rem;
+				color: var(--gray-600);
+				line-height: 1.7;
+			}
+
+			/* ── EXPERIENCE ── */
+			.experience {
+				background: var(--white);
+			}
+			.experience-inner {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+			.timeline {
+				position: relative;
+			}
+			.timeline::before {
+				content: "";
+				position: absolute;
+				left: 0;
+				top: 0;
+				bottom: 0;
+				width: 1px;
+				background: var(--gray-200);
+			}
+			.timeline-item {
+				display: grid;
+				grid-template-columns: auto 1fr;
+				gap: 0 2.5rem;
+				padding: 0 0 3.5rem 0;
+				position: relative;
+			}
+			.timeline-item:last-child {
+				padding-bottom: 0;
+			}
+			.timeline-dot {
+				width: 11px;
+				height: 11px;
+				border-radius: 50%;
+				border: 2px solid var(--accent);
+				background: var(--white);
+				position: relative;
+				left: -5px;
+				top: 0.35rem;
+				flex-shrink: 0;
+			}
+			.timeline-year {
+				font-size: 0.7rem;
+				letter-spacing: 0.15em;
+				text-transform: uppercase;
+				color: var(--accent-dark);
+				font-weight: 500;
+				margin-bottom: 0.5rem;
+			}
+			.timeline-role {
+				font-family: "Cormorant Garamond", serif;
+				font-size: 1.7rem;
+				font-weight: 500;
+				color: var(--black);
+				line-height: 1.2;
+				margin-bottom: 0.3rem;
+			}
+			.timeline-org {
+				font-size: 0.8rem;
+				font-weight: 500;
+				letter-spacing: 0.06em;
+				text-transform: uppercase;
+				color: var(--gray-400);
+				margin-bottom: 0.7rem;
+			}
+			.timeline-desc {
+				font-size: 0.95rem;
+				color: var(--gray-600);
+				line-height: 1.65;
+			}
+
+			/* ── PROJECTS ── */
+			.projects {
+				background: var(--gray-100);
+			}
+			.projects-inner {
+				max-width: 1200px;
+				margin: 0 auto;
+			}
+			.projects-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 1.5rem;
+			}
+
+			/* ─────────────────────────────
+   PROJECTS SECTION
+   Clean case-study style system
+   (clarity-first, subtle polish, scalable layout)
+───────────────────────────── */
+
+			.projects {
+				background: var(--white);
+				color: var(--black);
+				padding: 6rem 0;
+			}
+
+			.projects-inner {
+				max-width: 1100px;
+				margin: 0 auto;
+			}
+
+			/* ─────────────────────────────
+   GRID
+───────────────────────────── */
+
+			.projects-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 2rem;
+			}
+
+			/* ─────────────────────────────
+   CARD BASE
+───────────────────────────── */
+
+			.project-card {
+				background: var(--white);
+				border: 1px solid var(--gray-200);
+				border-radius: 6px;
+				padding: 2rem;
+				display: flex;
+				flex-direction: column;
+				gap: 1rem;
+
+				transition:
+					transform 0.25s ease,
+					box-shadow 0.25s ease;
+				position: relative;
+				overflow: hidden;
+			}
+
+			.project-card:hover {
+				transform: translateY(-4px);
+				box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+			}
+
+			/* subtle top accent on hover */
+			.project-card::before {
+				content: "";
+				position: absolute;
+				top: 0;
+				left: 0;
+				height: 2px;
+				width: 0%;
+				background: var(--accent);
+				transition: width 0.35s ease;
+			}
+
+			.project-card:hover::before {
+				width: 100%;
+			}
+
+			/* ─────────────────────────────
+   PROJECT IMAGE (SUPPORT LAYER)
+───────────────────────────── */
+
+			.project-image {
+				width: 100%;
+				height: 160px;
+				border-radius: 6px;
+				overflow: hidden;
+				margin-bottom: 0.5rem;
+			}
+
+			.project-image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+				transition:
+					transform 0.45s ease,
+					filter 0.3s ease;
+			}
+
+			.project-card:hover .project-image img {
+				transform: scale(1.06);
+				filter: brightness(1.05);
+			}
+
+			/* ─────────────────────────────
+   CONTENT
+───────────────────────────── */
+
+			.project-num {
+				font-family: "Cormorant Garamond", serif;
+				font-size: 2.4rem;
+				font-weight: 300;
+				color: var(--gray-200);
+				line-height: 1;
+			}
+
+			.project-title {
+				font-family: "Cormorant Garamond", serif;
+				font-size: 1.35rem;
+				font-weight: 500;
+				color: var(--black);
+				line-height: 1.2;
+			}
+
+			.project-desc {
+				font-size: 0.88rem;
+				color: var(--gray-600);
+				line-height: 1.6;
+			}
+
+			.project-impact {
+				font-size: 0.9rem;
+				font-weight: 600;
+				color: var(--accent-dark);
+				padding-top: 1rem;
+				border-top: 1px solid var(--gray-200);
+				line-height: 1.5;
+			}
+
+			/* ─────────────────────────────
+   LINK (PRODUCT-STYLE CTA)
+───────────────────────────── */
+
+			.project-link {
+				display: inline-flex;
+				align-items: center;
+				gap: 6px;
+
+				margin-top: 12px;
+				font-size: 0.9rem;
+				font-weight: 500;
+
+				color: #666;
+				text-decoration: none;
+
+				transition:
+					transform 0.25s ease,
+					color 0.25s ease,
+					opacity 0.25s ease;
+				opacity: 0.75;
+			}
+
+			.project-card:hover .project-link {
+				opacity: 1;
+				color: #000;
+				transform: translateX(4px);
+			}
+
+			.project-link::after {
+				content: "";
+				position: absolute;
+				left: 0;
+				bottom: -3px;
+				width: 0%;
+				height: 1px;
+				background: #000;
+				transition: width 0.25s ease;
+			}
+
+			.project-link:hover::after {
+				width: 100%;
+			}
+
+			@media (max-width: 768px) {
+				.projects-grid {
+					grid-template-columns: 1fr;
+				}
+
+				.project-card {
+					padding: 1.5rem;
+				}
+
+				.project-image {
+					height: 180px;
+				}
+
+				.project-card:hover {
+					transform: none;
+					box-shadow: none;
+				}
+			}
+
+			.media {
+				background: var(--black);
+				color: var(--white);
+				padding: 6rem 0;
+			}
+
+			.media-inner {
+				max-width: 1100px;
+				margin: 0 auto;
+			}
+
+			.media-heading {
+				font-family: "Cormorant Garamond", serif;
+				font-size: clamp(1.8rem, 3.5vw, 2.6rem);
+				font-weight: 300;
+				margin-bottom: 3rem;
+				color: var(--white);
+			}
+
+			.media-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+				gap: 1.5rem;
+			}
+
+			.media-card {
+				position: relative;
+				overflow: hidden;
+				border-radius: 14px;
+				padding: 2rem;
+				background: #0f0f0f;
+				border: 1px solid rgba(255, 255, 255, 0.08);
+				transition:
+					transform 0.35s ease,
+					border-color 0.35s ease;
+			}
+
+			.media-card:hover {
+				transform: translateY(-6px);
+				border-color: var(--accent);
+			}
+
+			.media-type {
+				font-size: 0.7rem;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: var(--accent);
+				margin-bottom: 1rem;
+				display: block;
+			}
+
+			.media-title {
+				font-family: "Cormorant Garamond", serif;
+				font-size: 1.4rem;
+				font-weight: 400;
+				margin-bottom: 0.8rem;
+				line-height: 1.3;
+			}
+
+			.media-desc {
+				font-size: 0.88rem;
+				line-height: 1.6;
+				color: rgba(255, 255, 255, 0.6);
+			}
+
+			.media-award {
+				margin-top: 1.5rem;
+				padding: 1rem 1.2rem;
+				background: rgba(200, 169, 110, 0.08);
+				border-left: 2px solid var(--accent);
+				font-size: 0.85rem;
+				color: var(--accent-light);
+			}
+
+			.media-type,
+			.media-title,
+			.media-desc,
+			.media-award {
+				position: relative;
+				z-index: 2;
+				transition: opacity 0.35s ease;
+			}
+
+			.media-image {
+				position: absolute;
+				inset: 0;
+				z-index: 1;
+				opacity: 0.25;
+				transform: scale(1.08);
+				transition:
+					opacity 0.4s ease,
+					transform 0.6s ease;
+			}
+
+			.media-image img {
+				width: 100%;
+				height: 100%;
+				object-fit: cover;
+			}
+
+			.media-card:hover .media-image {
+				opacity: 1;
+				transform: scale(1);
+			}
+
+			.media-card:hover .media-type,
+			.media-card:hover .media-title,
+			.media-card:hover .media-desc,
+			.media-card:hover .media-award {
+				opacity: 0;
+			}
+
+			@media (max-width: 768px) {
+				.media-grid {
+					grid-template-columns: 1fr;
+				}
+				.media-image {
+					position: relative;
+					opacity: 1;
+					transform: none;
+					height: 180px;
+					margin-top: 1rem;
+					border-radius: 10px;
+					overflow: hidden;
+				}
+
+				.media-card:hover {
+					transform: none;
+				}
+
+				.media-card:hover .media-type,
+				.media-card:hover .media-title,
+				.media-card:hover .media-desc,
+				.media-card:hover .media-award {
+					opacity: 1;
+				}
+			}
+
+			/* ── BELIEFS ── */
+			.beliefs {
+				background: var(--white);
+			}
+			.beliefs-inner {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+			.belief-list {
+				display: flex;
+				flex-direction: column;
+				gap: 0;
+			}
+			.belief-item {
+				padding: 2.5rem 0;
+				border-bottom: 1px solid var(--gray-200);
+				display: grid;
+				grid-template-columns: 2rem 1fr;
+				gap: 2rem;
+				align-items: start;
+				transition: background 0.2s;
+			}
+			.belief-item:first-child {
+				border-top: 1px solid var(--gray-200);
+			}
+			.belief-num {
+				font-size: 0.75rem;
+				color: var(--accent);
+				font-weight: 500;
+				letter-spacing: 0.1em;
+				padding-top: 0.2rem;
+			}
+			.belief-text {
+				font-family: "Cormorant Garamond", serif;
+				font-size: clamp(1.2rem, 2.5vw, 1.55rem);
+				font-weight: 400;
+				line-height: 1.5;
+				color: var(--text);
+				font-style: italic;
+			}
+
+			/* ── LINKS ── */
+			.links-section {
+				background: var(--gray-100);
+			}
+			.links-inner {
+				max-width: 900px;
+				margin: 0 auto;
+			}
+			.links-grid {
+				display: grid;
+				grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+				gap: 1rem;
+			}
+			.link-card {
+				padding: 1.8rem 1.5rem;
+				background: var(--white);
+				border: 1px solid var(--gray-200);
+				border-radius: 2px;
+				text-decoration: none;
+				display: flex;
+				align-items: center;
+				gap: 1rem;
+				transition: all 0.2s;
+				color: var(--text);
+			}
+			.link-card:hover {
+				border-color: var(--accent);
+				background: var(--white);
+			}
+			.link-card:hover .link-arrow {
+				transform: translateX(4px);
+			}
+			.link-icon {
+				font-size: 1.3rem;
+				flex-shrink: 0;
+			}
+			.link-label {
+				font-size: 0.85rem;
+				font-weight: 500;
+				letter-spacing: 0.06em;
+				color: var(--text);
+			}
+			.link-sub {
+				font-size: 0.75rem;
+				color: var(--gray-400);
+				margin-top: 0.2rem;
+			}
+			.link-arrow {
+				margin-left: auto;
+				color: var(--gray-400);
+				font-size: 1rem;
+				transition: transform 0.2s;
+			}
+
+			/* ─────────────────────────────
+   CONTACT SECTION
+   CTA-BASED (NO FORM SYSTEM)
+───────────────────────────── */
+
+			.contact {
+				background: var(--black);
+				color: var(--white);
+				padding: 6rem 0;
+			}
+
+			.contact-inner {
+				max-width: 900px;
+				margin: 0 auto;
+				display: grid;
+				grid-template-columns: 1fr 1fr;
+				gap: 5rem;
+				align-items: start;
+			}
+
+			/* ─────────────────────────────
+   LEFT SIDE
+───────────────────────────── */
+
+			.contact-heading {
+				font-family: "Cormorant Garamond", serif;
+				font-size: 2.4rem;
+				font-weight: 300;
+				line-height: 1.1;
+				margin-bottom: 2rem;
+				color: var(--white);
+			}
+
+			.contact-heading span {
+				color: var(--accent);
+			}
+
+			.open-to-label {
+				font-size: 0.7rem;
+				letter-spacing: 0.18em;
+				text-transform: uppercase;
+				color: var(--accent);
+				margin-bottom: 1rem;
+				display: block;
+			}
+
+			.open-to-list {
+				list-style: none;
+				display: flex;
+				flex-direction: column;
+				gap: 0.5rem;
+			}
+
+			.open-to-list li {
+				font-size: 0.85rem;
+				color: rgba(255, 255, 255, 0.6);
+				padding-left: 1rem;
+				position: relative;
+			}
+
+			.open-to-list li::before {
+				content: "→";
+				position: absolute;
+				left: 0;
+				color: var(--accent);
+			}
+
+			/* ─────────────────────────────
+   RIGHT SIDE (CTA AREA)
+───────────────────────────── */
+
+			.contact-right {
+				display: flex;
+				flex-direction: column;
+				gap: 1.5rem;
+			}
+
+			.contact-text {
+				font-size: 0.95rem;
+				line-height: 1.7;
+				color: rgba(255, 255, 255, 0.7);
+			}
+
+			/* ─────────────────────────────
+   PRIMARY CTA BUTTON
+───────────────────────────── */
+
+			.contact-cta {
+				display: inline-flex;
+				justify-content: center;
+				align-items: center;
+
+				padding: 1rem 2rem;
+				background: var(--accent);
+				color: var(--black);
+
+				font-size: 0.8rem;
+				font-weight: 600;
+				letter-spacing: 0.12em;
+				text-transform: uppercase;
+
+				text-decoration: none;
+				border-radius: 2px;
+
+				transition:
+					transform 0.2s ease,
+					background 0.2s ease;
+			}
+
+			.contact-cta:hover {
+				background: var(--accent-light);
+				transform: translateY(-2px);
+			}
+
+			/* ─────────────────────────────
+   SECONDARY LINK
+───────────────────────────── */
+
+			.contact-secondary {
+				font-size: 0.9rem;
+				color: rgba(255, 255, 255, 0.6);
+				text-decoration: none;
+
+				display: inline-block;
+				transition:
+					color 0.2s ease,
+					transform 0.2s ease;
+			}
+
+			.contact-secondary:hover {
+				color: var(--white);
+				transform: translateX(4px);
+			}
+
+			/* ─────────────────────────────
+   RESPONSIVE
+───────────────────────────── */
+
+			@media (max-width: 768px) {
+				.contact-inner {
+					grid-template-columns: 1fr;
+					gap: 3rem;
+				}
+
+				.contact-heading {
+					font-size: 2rem;
+				}
+			}
+
+			/* ── FOOTER ── */
+			footer {
+				padding: 2rem 3rem;
+				background: var(--black);
+				border-top: 1px solid rgba(255, 255, 255, 0.06);
+				display: flex;
+				justify-content: space-between;
+				align-items: center;
+				flex-wrap: wrap;
+				gap: 1rem;
+			}
+			footer p {
+				font-size: 0.78rem;
+				color: rgba(255, 255, 255, 0.499);
+			}
+			footer span {
+				font-size: 0.78rem;
+				color: rgba(255, 255, 255, 0.499);
+				letter-spacing: 0.06em;
+			}
+
+			/* ── ANIMATIONS ── */
+			@keyframes fadeUp {
+				from {
+					opacity: 0;
+					transform: translateY(20px);
+				}
+				to {
+					opacity: 1;
+					transform: translateY(0);
+				}
+			}
+
+			.fade-in {
+				opacity: 0;
+				transform: translateY(24px);
+				transition:
+					opacity 0.7s ease,
+					transform 0.7s ease;
+			}
+			.fade-in.visible {
+				opacity: 1;
+				transform: none;
+			}
+
+			/* ── RESPONSIVE ── */
+			@media (max-width: 900px) {
+				nav {
+					padding: 1rem 1.5rem;
+				}
+				.nav-links {
+					display: none;
+				}
+				section {
+					padding: 4rem 1.5rem;
+				}
+				.story-layout {
+					grid-template-columns: 1fr;
+					gap: 3rem;
+				}
+				.story-left {
+					position: static;
+				}
+				.pillars-grid {
+					grid-template-columns: 1fr;
+				}
+				.pillar {
+					border-right: none;
+					border-bottom: 1px solid var(--gray-200);
+				}
+				.contact-inner {
+					grid-template-columns: 1fr;
+					gap: 3rem;
+				}
+				footer {
+					padding: 1.5rem;
+				}
+			}
+			@media (max-width: 600px) {
+				.hero-ctas {
+					flex-direction: column;
+					align-items: center;
+				}
+				.proof-grid {
+					grid-template-columns: 1fr;
+				}
+				.proof-card {
+					border-right: none;
+					border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+				}
+				.timeline::before {
+					display: none;
+				}
+				.timeline-item {
+					grid-template-columns: 1fr;
+				}
+				.timeline-dot {
+					display: none;
+				}
+			}
+		</style>
+	</head>
+	<body>
+		<!-- NAV -->
+		<nav>
+			<a href="#" class="nav-logo">Moyomade Adegbite</a>
+			<ul class="nav-links">
+				<li><a href="#proof">Impact</a></li>
+				<li><a href="#experience">Experience</a></li>
+				<li><a href="#projects">Projects</a></li>
+				<li><a href="#media">Recognition</a></li>
+				<li><a href="#contact">Contact</a></li>
+			</ul>
+		</nav>
+
+		<!-- HERO -->
+		<section class="hero" id="top">
+			<div class="hero-bg"></div>
+			<div class="hero-grain"></div>
+			<div class="hero-content">
+				<h1 class="hero-name">Moyomade<br />Adegbite</h1>
+				<p class="hero-title">
+					Software Developer · Youth Advocate · Public Speaker
+				</p>
+				<p class="hero-statement">
+					I build software and use my voice to expand access to quality
+					education and opportunities for young people. As a Lagos State Youth
+					Ambassador, I work at the intersection of technology, communication,
+					and youth engagement to drive meaningful impact.
+				</p>
+				<div class="hero-tags">
+					<span class="tag">SDG 4 · Quality Education</span>
+					<span class="tag">Lagos State Youth Ambassador</span>
+					<span class="tag">Public Speaker</span>
+				</div>
+				<div class="hero-ctas">
+					<a href="#proof" class="btn-primary">View Impact</a>
+					<a href="#projects" class="btn-secondary">Explore Work</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- PROOF SNAPSHOT -->
+		<section class="proof" id="proof">
+			<div class="proof-inner fade-in">
+				<div class="proof-header">
+					<h2 class="proof-heading">Proof of Impact</h2>
+				</div>
+				<div class="proof-grid">
+					<div class="proof-card">
+						<span class="proof-number">01</span>
+						<div class="proof-card-dot"></div>
+						<p class="proof-card-title">Lagos State Youth Ambassador</p>
+						<p class="proof-card-sub">
+							Leading youth engagement and education advocacy at a state-wide
+							level.
+						</p>
+					</div>
+					<div class="proof-card">
+						<span class="proof-number">02</span>
+						<div class="proof-card-dot"></div>
+						<p class="proof-card-title">Best Debater — LSUDS (2025/2026)</p>
+						<p class="proof-card-sub">
+							Recognized for excellence in public speaking and structured
+							argument.
+						</p>
+					</div>
+					<div class="proof-card">
+						<span class="proof-number">03</span>
+						<div class="proof-card-dot"></div>
+						<p class="proof-card-title">DevFest Lagos — Frontend Engineer</p>
+						<p class="proof-card-sub">
+							Built digital systems supporting one of Nigeria’s largest
+							developer communities.
+						</p>
+					</div>
+					<div class="proof-card">
+						<span class="proof-number">04</span>
+						<div class="proof-card-dot"></div>
+						<p class="proof-card-title">National TV Youth Speaker</p>
+						<p class="proof-card-sub">
+							Featured in discussions on youth participation and
+							nation-building.
+						</p>
+					</div>
+					<div class="proof-card">
+						<span class="proof-number">05</span>
+						<div class="proof-card-dot"></div>
+						<p class="proof-card-title">Platforms Serving 4,000+ Users</p>
+						<p class="proof-card-sub">
+							Built and contributed to systems used by thousands across events
+							and communities.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- STORY -->
+		<section class="story" id="story">
+			<div class="story-inner">
+				<div class="story-layout">
+					<div class="story-left fade-in">
+						<span class="section-label">Background</span>
+						<div class="story-number">01</div>
+						<h2 class="section-heading">Why I Do<br />What I Do</h2>
+					</div>
+					<div class="story-paragraphs fade-in">
+						<p>
+							I had access to education that many around me did not, and that
+							shaped how I see responsibility.
+						</p>
+						<p>
+							Over time, I realized that education is not only about access — it
+							is about quality, opportunity, and the ability to apply knowledge
+							meaningfully.
+						</p>
+						<p>
+							This realization led me to combine software development, public
+							speaking, and youth engagement as tools for impact.
+						</p>
+						<p>
+							I believe young people should not be excluded from the systems
+							that shape their future — they should help build them.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PILLARS -->
+		<section class="pillars" id="pillars">
+			<div class="pillars-inner fade-in">
+				<span class="section-label">Approach</span>
+				<h2 class="section-heading">How I Create Impact</h2>
+
+				<div class="pillars-grid">
+					<div class="pillar">
+						<span class="pillar-icon">⟨/⟩</span>
+						<h3 class="pillar-title">Technology</h3>
+						<p class="pillar-body">
+							I build software that improves access to learning, information,
+							and real opportunities. My focus is not just functionality, but
+							creating systems that are useful, accessible, and scalable.
+						</p>
+					</div>
+
+					<div class="pillar">
+						<span class="pillar-icon">◎</span>
+						<h3 class="pillar-title">Communication</h3>
+						<p class="pillar-body">
+							I use public speaking and storytelling to educate, challenge, and
+							engage young people on issues that affect their growth, decisions,
+							and future.
+						</p>
+					</div>
+
+					<div class="pillar">
+						<span class="pillar-icon">✧</span>
+						<h3 class="pillar-title">Youth Engagement</h3>
+						<p class="pillar-body">
+							I contribute to youth-led initiatives that promote leadership,
+							learning, and active participation—creating spaces where young
+							people can think, speak, and act.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- EXPERIENCE -->
+		<section class="experience" id="experience">
+			<div class="experience-inner">
+				<span class="section-label">Leadership</span>
+				<h2 class="section-heading">Experience & Impact</h2>
+
+				<div class="timeline">
+					<div class="timeline-item fade-in">
+						<span class="timeline-dot"></span>
+						<div>
+							<p class="timeline-year">Present</p>
+							<h3 class="timeline-role">Operations &amp; Logistics Lead</h3>
+							<p class="timeline-org">Lagos State Youth Ambassador</p>
+							<p class="timeline-desc">
+								Leading youth engagement and education advocacy at scale across
+								Lagos State. Coordinating initiatives that connect young people
+								to opportunities, mentorship, and active participation in civic
+								life.
+							</p>
+						</div>
+					</div>
+
+					<div class="timeline-item fade-in">
+						<span class="timeline-dot"></span>
+						<div>
+							<p class="timeline-year">2024 - Present</p>
+							<h3 class="timeline-role">Frontend Engineer</h3>
+							<p class="timeline-org">DevFest Lagos</p>
+							<p class="timeline-desc">
+								Built and supported digital systems for one of West Africa’s
+								largest developer communities, improving accessibility and
+								participation for thousands of attendees and contributors.
+							</p>
+						</div>
+					</div>
+
+					<div class="timeline-item fade-in">
+						<span class="timeline-dot"></span>
+						<div>
+							<p class="timeline-year">2025</p>
+							<h3 class="timeline-role">Media Team</h3>
+							<p class="timeline-org">Head Boy &amp; Head Girl Conference</p>
+							<p class="timeline-desc">
+								Contributed to youth leadership education through media and
+								storytelling, helping capture and amplify the voices of student
+								leaders across schools in Lagos.
+							</p>
+						</div>
+					</div>
+
+					<div class="timeline-item fade-in">
+						<span class="timeline-dot"></span>
+						<div>
+							<p class="timeline-year">Ongoing</p>
+							<h3 class="timeline-role">Member</h3>
+							<p class="timeline-org">Eko Book Club</p>
+							<p class="timeline-desc">
+								Promoting reading culture, critical thinking, and meaningful
+								discussion among young people through consistent community
+								engagement.
+							</p>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- PROJECTS -->
+		<section class="projects" id="projects">
+			<div class="projects-inner fade-in">
+				<span class="section-label">Work</span>
+				<h2 class="section-heading">Projects & Systems</h2>
+
+				<div class="projects-grid">
+					<div class="project-card">
+						<span class="project-num">01</span>
+						<div class="project-image">
+							<img src="devfest.png" alt="DevFest Lagos Platform" />
+						</div>
+						<h3 class="project-title">DevFest Lagos Ticket Platform</h3>
+
+						<p class="project-desc">
+							A digital platform for one of Africa’s largest developer
+							communities. It provides structured access to event information,
+							sessions, and participation tools.
+						</p>
+
+						<p class="project-impact">
+							→ Improved accessibility and participation for thousands of
+							developers
+						</p>
+
+						<a
+							href="https://tickets.devfestlagos.com/"
+							target="_blank"
+							class="project-link"
+						>
+							View Live →
+						</a>
+					</div>
+
+					<!-- 02 -->
+					<div class="project-card">
+						<span class="project-num">02</span>
+
+						<div class="project-image">
+							<img src="prompt.PNG" alt="Mega Home" />
+						</div>
+						<h3 class="project-title">Promptopia</h3>
+
+						<p class="project-desc">
+							A platform for creating and sharing AI prompts to support
+							structured thinking and idea development. It enables users to
+							discover, share, and build on knowledge collaboratively.
+						</p>
+
+						<p class="project-impact">
+							→ Enabled structured thinking and scalable knowledge sharing
+						</p>
+
+						<a
+							href="https://promptopia.vercel.app/"
+							target="_blank"
+							class="project-link"
+						>
+							View Live →
+						</a>
+					</div>
+
+					<!-- 03 -->
+					<div class="project-card">
+						<span class="project-num">03</span>
+						<div class="project-image">
+							<img src="mega home.png" alt="Mega Home" />
+						</div>
+						<h3 class="project-title">Student Tech Participation Platform</h3>
+
+						<p class="project-desc">
+							A community platform connecting high school students interested in
+							technology. It helps them discover hackathons, competitions, and
+							peer collaboration opportunities.
+						</p>
+
+						<p class="project-impact">
+							→ Increased access to tech opportunities and peer collaboration
+							for students
+						</p>
+					</div>
+
+					<!-- 04 -->
+					<div class="project-card">
+						<span class="project-num">04</span>
+						<div class="project-image">
+							<img src="dc.PNG" alt="Digital Card" />
+						</div>
+						<h3 class="project-title">Go Digital Insurance Cards Platform</h3>
+
+						<p class="project-desc">
+							A digital insurance platform that replaces physical policy cards
+							with secure mobile-accessible versions. It allows clients to
+							access and manage insurance cards anytime on their devices.
+						</p>
+
+						<p class="project-impact">
+							→ Improved accessibility and convenience through secure digital
+							insurance access
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- MEDIA & RECOGNITION -->
+		<section class="media" id="media">
+			<div class="media-inner fade-in">
+				<h2 class="media-heading">Media &amp; Recognition</h2>
+				<div class="media-grid">
+					<div class="media-card">
+						<span class="media-type">Television</span>
+						<h3 class="media-title">National TV Appearance</h3>
+
+						<p class="media-desc">
+							Featured on national television discussing youth participation,
+							civic responsibility, and nation-building.
+						</p>
+
+						<div class="media-image">
+							<img src="tvc.jpeg" alt="National TV appearance" />
+						</div>
+					</div>
+					<div class="media-card">
+						<span class="media-type">Public Speaking</span>
+						<h3 class="media-title">Speaker &amp; Advocate</h3>
+						<p class="media-desc">
+							Delivered talks on education equity, youth empowerment, and
+							technology for social impact at conferences, summits, and
+							community forums across Lagos.
+						</p>
+
+						<div class="media-image">
+							<img src="speak.JPEG" alt="Speaker" />
+						</div>
+					</div>
+					<div class="media-card">
+						<span class="media-type">Award</span>
+						<h3 class="media-title">Communication Excellence</h3>
+						<p class="media-desc">
+							Recognized for outstanding performance in debate and public
+							speaking, demonstrating the ability to articulate complex ideas
+							with clarity, persuasion, and impact.
+						</p>
+						<div class="media-award">
+							🏆 Best Debater — Intra-LSUDS, 2025/2026
+						</div>
+
+						<div class="media-image">
+							<img src="award.JPEG" alt="Award" />
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- BELIEFS -->
+		<section class="beliefs" id="beliefs">
+			<div class="beliefs-inner">
+				<span class="section-label">Principles</span>
+				<h2 class="section-heading">What I Believe</h2>
+				<div class="belief-list">
+					<div class="belief-item fade-in">
+						<span class="belief-num">01</span>
+						<p class="belief-text">
+							Access to education should not determine potential — it should
+							unlock it.
+						</p>
+					</div>
+					<div class="belief-item fade-in">
+						<span class="belief-num">02</span>
+						<p class="belief-text">
+							Young people are not bystanders — they are active builders of the
+							systems they live in.
+						</p>
+					</div>
+					<div class="belief-item fade-in">
+						<span class="belief-num">03</span>
+						<p class="belief-text">
+							Technology and communication together can drive meaningful and
+							lasting impact.
+						</p>
+					</div>
+				</div>
+			</div>
+		</section>
+
+		<!-- LINKS -->
+		<section class="links-section" id="links">
+			<div class="links-inner fade-in">
+				<span class="section-label">Explore More</span>
+				<h2 class="section-heading">Connect &amp; Validate</h2>
+				<div class="links-grid">
+					<a
+						href="https://www.linkedin.com/in/moyomade-adegbite/"
+						target="_blank"
+						class="link-card"
+					>
+						<span class="link-icon">in</span>
+						<div>
+							<p class="link-label">LinkedIn</p>
+							<p class="link-sub">Professional profile</p>
+						</div>
+						<span class="link-arrow">→</span>
+					</a>
+					<a
+						href="https://medium.com/@adegbitemoyomade2004"
+						target="_blank"
+						class="link-card"
+					>
+						<span class="link-icon">✦</span>
+						<div>
+							<p class="link-label">Articles &amp; Blog</p>
+							<p class="link-sub">Perspectives &amp; writing</p>
+						</div>
+						<span class="link-arrow">→</span>
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- CONTACT -->
+		<section class="contact" id="contact">
+			<div class="contact-inner">
+				<div class="contact-left fade-in">
+					<h2 class="contact-heading">
+						Let’s build<br />
+						something <span>meaningful</span>.
+					</h2>
+
+					<span class="open-to-label">Open To</span>
+					<ul class="open-to-list">
+						<li>Youth initiatives</li>
+						<li>Education-focused projects</li>
+						<li>Technology for social impact</li>
+						<li>Speaking engagements</li>
+					</ul>
+				</div>
+
+				<div class="contact-right fade-in">
+					<p class="contact-text">
+						If you’re working on something impactful, I’m open to collaboration
+						and meaningful conversations.
+					</p>
+
+					<a class="contact-cta" href="mailto:adegbitemoyomade2004@gmail.com">
+						Send Message
+					</a>
+
+					<a
+						class="contact-secondary"
+						href="https://www.linkedin.com/in/moyomade-adegbite/"
+						target="_blank"
+					>
+						Connect on LinkedIn →
+					</a>
+				</div>
+			</div>
+		</section>
+
+		<!-- FOOTER -->
+		<footer>
+			<p>© <span id="year"></span> Moyomade Adegbite. All rights reserved.</p>
+
+			<script>
+				document.getElementById("year").textContent = new Date().getFullYear();
+			</script>
+			<span>Software Developer · Youth Advocate · Public Speaker</span>
+		</footer>
+
+		<script>
+			// Scroll-triggered fade animations
+			const observer = new IntersectionObserver(
+				(entries) => {
+					entries.forEach((entry, i) => {
+						if (entry.isIntersecting) {
+							setTimeout(() => {
+								entry.target.classList.add("visible");
+							}, entry.target.dataset.delay || 0);
+							observer.unobserve(entry.target);
+						}
+					});
+				},
+				{ threshold: 0.1, rootMargin: "0px 0px -40px 0px" }
+			);
+
+			document.querySelectorAll(".fade-in").forEach((el, i) => {
+				el.dataset.delay = (i % 4) * 80;
+				observer.observe(el);
+			});
+
+			// Smooth active nav
+			const sections = document.querySelectorAll("section[id]");
+			const navLinks = document.querySelectorAll(".nav-links a");
+			window.addEventListener("scroll", () => {
+				let current = "";
+				sections.forEach((s) => {
+					if (window.scrollY >= s.offsetTop - 100) current = s.id;
+				});
+				navLinks.forEach((a) => {
+					a.style.color =
+						a.getAttribute("href") === "#" + current
+							? "var(--accent-dark)"
+							: "";
+				});
+			});
+		</script>
+	</body>
+</html>
