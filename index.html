@@ -504,16 +504,9 @@
 				gap: 1.5rem;
 			}
 
-			/* ─────────────────────────────
-   PROJECTS SECTION
-   Clean case-study style system
-   (clarity-first, subtle polish, scalable layout)
-───────────────────────────── */
-
 			.projects {
 				background: var(--white);
 				color: var(--black);
-				padding: 6rem 0;
 			}
 
 			.projects-inner {
@@ -521,19 +514,11 @@
 				margin: 0 auto;
 			}
 
-			/* ─────────────────────────────
-   GRID
-───────────────────────────── */
-
 			.projects-grid {
 				display: grid;
 				grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
 				gap: 2rem;
 			}
-
-			/* ─────────────────────────────
-   CARD BASE
-───────────────────────────── */
 
 			.project-card {
 				background: var(--white);
@@ -572,10 +557,6 @@
 				width: 100%;
 			}
 
-			/* ─────────────────────────────
-   PROJECT IMAGE (SUPPORT LAYER)
-───────────────────────────── */
-
 			.project-image {
 				width: 100%;
 				height: 160px;
@@ -597,10 +578,6 @@
 				transform: scale(1.06);
 				filter: brightness(1.05);
 			}
-
-			/* ─────────────────────────────
-   CONTENT
-───────────────────────────── */
 
 			.project-num {
 				font-family: "Cormorant Garamond", serif;
@@ -632,10 +609,6 @@
 				border-top: 1px solid var(--gray-200);
 				line-height: 1.5;
 			}
-
-			/* ─────────────────────────────
-   LINK (PRODUCT-STYLE CTA)
-───────────────────────────── */
 
 			.project-link {
 				display: inline-flex;
@@ -699,7 +672,6 @@
 			.media {
 				background: var(--black);
 				color: var(--white);
-				padding: 6rem 0;
 			}
 
 			.media-inner {
@@ -932,7 +904,6 @@
 			.contact {
 				background: var(--black);
 				color: var(--white);
-				padding: 6rem 0;
 			}
 
 			.contact-inner {
@@ -1105,7 +1076,55 @@
 				}
 				.nav-links {
 					display: none;
+					position: fixed;
+					top: 0;
+					left: 0;
+					right: 0;
+					bottom: 0;
+					background: rgba(10, 10, 10, 0.97);
+					flex-direction: column;
+					align-items: center;
+					justify-content: center;
+					gap: 2.5rem;
+					z-index: 99;
 				}
+				.nav-links.open {
+					display: flex;
+				}
+				.nav-links a {
+					font-size: 1.3rem;
+					color: rgba(255, 255, 255, 0.7);
+				}
+				.hamburger {
+					display: flex;
+					flex-direction: column;
+					gap: 5px;
+					cursor: pointer;
+					z-index: 101;
+					background: none;
+					border: none;
+					padding: 4px;
+				}
+				.hamburger span {
+					display: block;
+					width: 24px;
+					height: 1.5px;
+					background: var(--text);
+					transition: all 0.3s ease;
+				}
+				.hamburger.open span:nth-child(1) {
+					transform: translateY(6.5px) rotate(45deg);
+				}
+				.hamburger.open span:nth-child(2) {
+					opacity: 0;
+				}
+				.hamburger.open span:nth-child(3) {
+					transform: translateY(-6.5px) rotate(-45deg);
+				}
+				.hamburger.open span {
+					background: var(--white);
+				}
+				
 				section {
 					padding: 4rem 1.5rem;
 				}
@@ -1158,7 +1177,7 @@
 	<body>
 		<!-- NAV -->
 		<nav>
-			<a href="#" class="nav-logo">Moyomade Adegbite</a>
+			<a href="#" class="nav-logo">M.A</a>
 			<ul class="nav-links">
 				<li><a href="#proof">Impact</a></li>
 				<li><a href="#experience">Experience</a></li>
